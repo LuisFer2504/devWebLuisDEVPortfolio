@@ -1,26 +1,122 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
+/* ──────────────────────────────────────────────────────────────
+   Design Tokens — Tailwind CSS v4
+   Material Design 3 Dark Theme
+   ────────────────────────────────────────────────────────────── */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* ── Primary ───────────────────────────────────── */
+  --color-primary: #b1c5ff;
+  --color-primary-container: #598cff;
+  --color-on-primary: #002c71;
+  --color-on-primary-container: #002663;
+  --color-on-primary-fixed: #001946;
+  --color-on-primary-fixed-variant: #00419e;
+  --color-primary-fixed: #dae2ff;
+  --color-primary-fixed-dim: #b1c5ff;
+  --color-inverse-primary: #0057cf;
+
+  /* ── Secondary ─────────────────────────────────── */
+  --color-secondary: #d3fbff;
+  --color-secondary-container: #00eefc;
+  --color-on-secondary: #00363a;
+  --color-on-secondary-container: #00686f;
+  --color-on-secondary-fixed: #002022;
+  --color-on-secondary-fixed-variant: #004f54;
+  --color-secondary-fixed: #7df4ff;
+  --color-secondary-fixed-dim: #00dbe9;
+
+  /* ── Tertiary ──────────────────────────────────── */
+  --color-tertiary: #ebb2ff;
+  --color-tertiary-container: #cd5dff;
+  --color-on-tertiary: #520072;
+  --color-on-tertiary-container: #470064;
+  --color-on-tertiary-fixed: #320047;
+  --color-on-tertiary-fixed-variant: #74009f;
+  --color-tertiary-fixed: #f8d8ff;
+  --color-tertiary-fixed-dim: #ebb2ff;
+
+  /* ── Error ─────────────────────────────────────── */
+  --color-error: #ffb4ab;
+  --color-error-container: #93000a;
+  --color-on-error: #690005;
+  --color-on-error-container: #ffdad6;
+
+  /* ── Surface / Background ──────────────────────── */
+  --color-background: #111316;
+  --color-on-background: #e2e2e6;
+  --color-surface: #111316;
+  --color-on-surface: #e2e2e6;
+  --color-on-surface-variant: #c2c6d7;
+  --color-surface-dim: #111316;
+  --color-surface-bright: #37393d;
+  --color-surface-variant: #333538;
+  --color-surface-container-lowest: #0c0e11;
+  --color-surface-container-low: #1a1c1f;
+  --color-surface-container: #1e2023;
+  --color-surface-container-high: #282a2d;
+  --color-surface-container-highest: #333538;
+  --color-surface-tint: #b1c5ff;
+  --color-inverse-surface: #e2e2e6;
+  --color-inverse-on-surface: #2f3034;
+
+  /* ── Outline ───────────────────────────────────── */
+  --color-outline: #8c90a0;
+  --color-outline-variant: #424655;
+
+  /* ── Fonts ─────────────────────────────────────── */
+  --font-headline: var(--font-montserrat);
+  --font-body: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ──────────────────────────────────────────────────────────────
+   Base Styles
+   ────────────────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-on-background);
+  font-family: var(--font-body), system-ui, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: var(--color-primary-container);
+  color: var(--color-on-primary-container);
+}
+
+/* ──────────────────────────────────────────────────────────────
+   Utility Classes
+   Only for effects that cannot be achieved with Tailwind alone
+   ────────────────────────────────────────────────────────────── */
+.glass-card {
+  background: rgba(30, 34, 40, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #b1c5ff, #00eefc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.timeline-gradient {
+  background: linear-gradient(180deg, #b1c5ff 0%, #00eefc 100%);
+}
+
+/* ── Focus ring for accessibility ────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
 }
