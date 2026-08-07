@@ -30,17 +30,22 @@ export const projects: readonly Project[] = [
     ],
   },
   {
-    id: 'orbit-cloud-manager',
-    title: 'Orbit Cloud Manager',
+    id: 'dev-eco-link',
+    title: 'Dev-EcoLink',
     description:
-      'Una plataforma integral de orquestación para microservicios, con pipelines de CI/CD automatizados y despliegues de infraestructura como código.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAwJIv-zUBWIkUR8i1tUWal61HWeYi3F4ByfOtM2kcyf840ABF_i6PM05peZBeOCDyhohCqZZCTYAAKjmlUMSrKHN9rWx0zg9tA8O13-1hiROU6SsnVRKrLDDxW6lff9EZ12SFjkeOGcNJYw1lI9BLHXNOcykwF7CBvNgwjHvi_CKltE2zHbT2nMtxrempMdFlQTayMq46f7OGh-JmTjGHqUmicTvXc11DzB4YGEoWTU60s3Bi3It62qMCfbc30sJ7t3_EFOAdZa14',
+      'Dev-EcoLink es una aplicación web diseñada para fomentar el cuidado del medio ambiente mediante la participación ciudadana. El proyecto propone una experiencia gamificada donde los usuarios pueden registrar actividades ecológicas, acumular puntos, completar retos y contribuir al cuidado de las playas de Paita.',
+    image: '/images/projects/eco-link-home.png',
     imageAlt:
-      'Plataforma futurista de gestión de infraestructura cloud mostrando grafos de red y métricas de monitoreo de servidores.',
-    tags: ['Docker', 'Kubernetes', 'TypeScript'],
+      'Interfaz principal de la aplicación Dev-EcoLink Paita mostrando la sección de inicio, mapa de playas, registro de actividades y ranking de líderes.',
+    tags: ['React', 'TypeScript', 'Tailwind CSS', 'Gamificación'],
     links: [
-      { label: 'Ver Proyecto', href: '#', icon: 'arrow-right', variant: 'button' },
-      { label: 'Documentación', href: '#', icon: 'book-open', variant: 'secondary' },
+      { label: 'Ver Demo', href: 'https://dev-eco-link.vercel.app/', icon: 'external-link', variant: 'button' },
+      { label: 'GitHub', href: 'https://github.com/LuisFer2504/Dev-EcoLink', icon: 'github', variant: 'secondary' },
+    ],
+    images: [
+      '/images/projects/eco-link-home.png',
+      '/images/projects/eco-link-register.png',
+      '/images/projects/eco-link-ranking.png',
     ],
     featured: true,
   },

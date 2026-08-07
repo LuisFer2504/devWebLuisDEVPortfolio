@@ -46,6 +46,7 @@ export interface Project {
   readonly tags: readonly string[];
   readonly links: readonly ProjectLink[];
   readonly featured?: boolean;
+  readonly images?: readonly string[];
 }
 
 // ─── Experience ────────────────────────────────────────────────
