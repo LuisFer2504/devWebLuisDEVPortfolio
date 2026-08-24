@@ -15,6 +15,7 @@ export default function TimelineItem({
 }: TimelineItemProps) {
   const isEven = index % 2 === 0;
 
+  
   return (
     <motion.div
       variants={fadeUpVariants}
