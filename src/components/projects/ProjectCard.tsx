@@ -184,7 +184,7 @@ export default function ProjectCard({
           <h3
             className={`font-headline font-semibold text-on-surface ${
               isFullWidth
-                ? 'text-2xl lg:text-[40px] lg:font-extrabold lg:leading-[1.2]'
+                ? 'text-2xl md:text-3xl lg:text-[40px] lg:font-extrabold lg:leading-[1.2]'
                 : 'text-2xl'
             }`}
           >

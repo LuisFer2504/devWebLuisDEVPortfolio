@@ -15,7 +15,7 @@ export default function SectionHeader({
 
   return (
     <FadeUp className={`mb-20 ${alignClasses}`}>
-      <h2 className="font-headline text-[40px] font-bold leading-[1.2] text-on-background mb-4">
+      <h2 className="font-headline text-[28px] md:text-[40px] font-bold leading-[1.2] text-on-background mb-4">
         {title}
       </h2>
       {align === 'center' && (

@@ -15,12 +15,12 @@ export default function Projects() {
   const featuredProjects = projects.filter((p) => p.featured);
 
   return (
-    <section id="projects" className="py-28 md:py-32">
+    <section id="projects" className="py-16 md:py-28 lg:py-32">
       <Container>
         {/* Header */}
         <FadeUp className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
-            <h2 className="font-headline text-[40px] font-bold leading-[1.2] text-on-background mb-2">
+            <h2 className="font-headline text-[28px] md:text-[40px] font-bold leading-[1.2] text-on-background mb-2">
               Proyectos Destacados
             </h2>
             <p className="text-on-surface-variant max-w-xl">

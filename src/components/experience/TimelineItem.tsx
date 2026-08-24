@@ -22,7 +22,7 @@ export default function TimelineItem({
       whileInView="visible"
       viewport={VIEWPORT_ONCE}
       transition={{ delay: index * 0.15 }}
-      className={`group relative flex flex-col items-center ${
+      className={`group relative flex flex-col pl-8 md:pl-0 md:items-center ${
         isEven ? 'md:flex-row' : 'md:flex-row-reverse'
       } ${index > 0 ? 'md:mt-24' : ''}`}
     >
@@ -43,7 +43,7 @@ export default function TimelineItem({
 
       {/* Timeline Dot */}
       <div
-        className={`absolute left-0 md:left-1/2 z-10 h-4 w-4 -translate-x-1/2 rounded-full border-4 border-background ${experience.dotColor}`}
+        className={`absolute left-0 top-1 md:top-auto md:left-1/2 z-10 h-4 w-4 -translate-x-1/2 rounded-full border-4 border-background ${experience.dotColor}`}
         aria-hidden="true"
       />
 

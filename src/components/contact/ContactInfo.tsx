@@ -13,14 +13,14 @@ const socialIconMap: Record<string, React.ComponentType<{ size?: number }>> = {
 
 export default function ContactInfo() {
   return (
-    <div className="space-y-12 lg:w-2/5 border-r border-white/5 bg-primary-container/10 p-10 md:p-16">
+    <div className="flex flex-col justify-center space-y-8 md:space-y-12 lg:w-2/5 lg:border-r border-white/5 bg-primary-container/10 p-6 md:p-10 lg:p-16">
       {/* Heading */}
       <div>
-        <h2 className="font-headline text-[40px] font-bold leading-[1.2] mb-6">
+        <h2 className="font-headline text-[28px] md:text-[32px] lg:text-[40px] font-bold leading-[1.2] mb-4 md:mb-6">
           Construyamos algo{' '}
           <span className="text-primary">extraordinario</span> juntos.
         </h2>
-        <p className="text-on-surface-variant text-lg leading-relaxed">
+        <p className="text-on-surface-variant text-base md:text-lg leading-relaxed">
           {siteConfig.availability}
         </p>
       </div>
@@ -30,31 +30,31 @@ export default function ContactInfo() {
         {/* Email */}
         <Link
           href={`mailto:${siteConfig.email}`}
-          className="group flex items-center gap-4"
+          className="group flex items-center gap-4 min-w-0"
         >
-          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/5 transition-colors group-hover:bg-primary/20">
+          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white/5 transition-colors group-hover:bg-primary/20">
             <Mail size={20} className="text-primary" />
           </div>
-          <div>
+          <div className="min-w-0 flex-1">
             <p className="font-mono text-xs uppercase tracking-widest text-on-surface-variant">
               Envíame un email
             </p>
-            <p className="font-headline text-lg font-semibold">
+            <p className="font-headline text-sm sm:text-base md:text-lg font-semibold break-all sm:break-normal text-on-surface">
               {siteConfig.email}
             </p>
           </div>
         </Link>
 
         {/* Location */}
-        <div className="flex items-center gap-4">
-          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/5">
+        <div className="flex items-center gap-4 min-w-0">
+          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white/5">
             <MapPin size={20} className="text-primary" />
           </div>
-          <div>
+          <div className="min-w-0 flex-1">
             <p className="font-mono text-xs uppercase tracking-widest text-on-surface-variant">
               Ubicación
             </p>
-            <p className="font-headline text-lg font-semibold">
+            <p className="font-headline text-base md:text-lg font-semibold">
               {siteConfig.location}
             </p>
           </div>

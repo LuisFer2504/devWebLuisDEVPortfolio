@@ -5,7 +5,7 @@ import { experiences } from '@/data/experience';
 
 export default function Experience() {
   return (
-    <section id="experience" className="bg-surface-container-low py-28 md:py-32">
+    <section id="experience" className="bg-surface-container-low py-16 md:py-28 lg:py-32">
       <Container>
         <SectionHeader
           title="Crecimiento Profesional"
@@ -15,7 +15,7 @@ export default function Experience() {
         <div className="relative mx-auto max-w-4xl">
           {/* Vertical Gradient Line */}
           <div
-            className="timeline-gradient absolute left-0 md:left-1/2 top-0 bottom-0 hidden w-1 -translate-x-1/2 md:block"
+            className="timeline-gradient absolute left-0 md:left-1/2 top-0 bottom-0 w-0.5 md:w-1 -translate-x-1/2"
             aria-hidden="true"
           />
 

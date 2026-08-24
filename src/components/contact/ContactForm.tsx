@@ -121,7 +121,7 @@ export default function ContactForm() {
   );
 
   return (
-    <div className="p-10 md:p-16 lg:w-3/5">
+    <div className="p-6 md:p-10 lg:p-16 lg:w-3/5">
       <form onSubmit={handleSubmit} className="space-y-8">
         {/* Name & Email in grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
