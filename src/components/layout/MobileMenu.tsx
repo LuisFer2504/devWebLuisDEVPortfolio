@@ -80,6 +80,8 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               >
                 <Link
                   href={siteConfig.resumeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={onClose}
                   className="inline-block w-full text-center bg-primary-container text-on-primary-container px-6 py-3 rounded-lg font-bold transition-transform active:scale-95"
                 >

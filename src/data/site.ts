@@ -8,7 +8,7 @@ export const siteConfig: SiteConfig = {
   email: 'luismoralesaleman25@gmail.com',
   location: 'Remoto / Lima-Perú, ES',
   availability: 'Actualmente disponible para proyectos freelance y colaboraciones a tiempo completo.',
-  resumeUrl: '#',
+  resumeUrl: 'https://drive.google.com/file/d/1rCmrF0FgSG3GhE8DsJ-Z59tLA2Tx5vOl/view?usp=sharing',
   socials: [
     { label: 'GitHub', href: 'https://github.com/LuisFer2504', icon: 'github' },
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/luis76019168/', icon: 'linkedin' },

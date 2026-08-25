@@ -39,6 +39,8 @@ export default function Navbar() {
             <NavLinks activeSection={activeSection} />
             <Link
               href={siteConfig.resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-primary-container text-on-primary-container px-6 py-2 rounded-lg font-bold transition-transform active:scale-95 hover:brightness-110"
             >
               Currículum
