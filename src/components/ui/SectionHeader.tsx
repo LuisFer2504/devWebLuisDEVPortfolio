@@ -14,12 +14,12 @@ export default function SectionHeader({
   const alignClasses = align === 'center' ? 'text-center' : 'text-left';
 
   return (
-    <FadeUp className={`mb-20 ${alignClasses}`}>
+    <FadeUp className={`mb-14 md:mb-16 ${alignClasses}`}>
       <h2 className="font-headline text-[28px] md:text-[40px] font-bold leading-[1.2] text-on-background mb-4">
         {title}
       </h2>
       {align === 'center' && (
-        <div className="h-1 w-24 bg-primary mx-auto rounded-full" />
+        <div className="h-0.5 w-24 bg-gradient-to-r from-primary to-secondary-container mx-auto rounded-full" />
       )}
       {subtitle && (
         <p className="text-on-surface-variant mt-4 max-w-xl mx-auto">

@@ -65,6 +65,7 @@ function FormField({ field, value, onChange }: {
           onChange={(e) => onChange(field.name, e.target.value)}
           placeholder={field.placeholder}
           rows={field.rows}
+          required={field.name === 'message'}
           className={baseClasses}
         />
       ) : (
@@ -75,6 +76,7 @@ function FormField({ field, value, onChange }: {
           value={value}
           onChange={(e) => onChange(field.name, e.target.value)}
           placeholder={field.placeholder}
+          required={field.name === 'name' || field.name === 'email'}
           className={baseClasses}
         />
       )}

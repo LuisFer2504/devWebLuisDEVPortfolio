@@ -7,15 +7,15 @@ export const experiences: readonly Experience[] = [
     role: 'Desarrollador Junior',
     company: 'CASAMARKET APP S.A.C.',
     description:
-      'Desarrollo y mantenimiento de App movil y frontend con React y VUE, aplicando principios SOLID, limpio y estructurado.',
+      'Desarrollo y mantenimiento de App móvil y frontend con React y Vue, aplicando principios SOLID, limpio y estructurado.',
     dotColor: 'bg-[#00eefc]',
     hoverBorderColor: 'group-hover:border-[#00eefc]/40',
   },
   {
     id: 'industriasbalinsa',
-    period: '03/2025- 10/2025',
+    period: '03/2025 - 10/2025',
     role: 'Desarrollador de Software',
-    company: 'Industrias Balinsa S.A.C',
+    company: 'Industrias Balinsa S.A.C.',
     description:
       'Diseño, desarrollo y mantenimiento de los diversos sistemas, operaciones, páginas web y bases de datos de la empresa.',
     dotColor: 'bg-[#cd5dff]',

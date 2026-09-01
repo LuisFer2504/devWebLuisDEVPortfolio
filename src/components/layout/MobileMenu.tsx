@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
-import { X } from 'lucide-react';
+import { X, Download } from 'lucide-react';
 import { navLinks } from '@/data/navigation';
 import { siteConfig } from '@/data/site';
 
@@ -83,9 +83,10 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={onClose}
-                  className="inline-block w-full text-center bg-primary-container text-on-primary-container px-6 py-3 rounded-lg font-bold transition-transform active:scale-95"
+                  className="inline-flex items-center justify-center gap-2 w-full text-center bg-primary-container text-on-primary-container px-6 py-3 rounded-lg font-bold transition-transform active:scale-95"
                 >
-                  Currículum
+                  <span>Currículum</span>
+                  <Download size={18} />
                 </Link>
               </motion.div>
             </div>
