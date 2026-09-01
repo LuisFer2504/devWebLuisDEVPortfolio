@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Menu } from 'lucide-react';
+import { Menu, Download } from 'lucide-react';
 import { motion } from 'framer-motion';
 import NavLinks from './NavLinks';
 import MobileMenu from './MobileMenu';
@@ -41,9 +41,10 @@ export default function Navbar() {
               href={siteConfig.resumeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-primary-container text-on-primary-container px-6 py-2 rounded-lg font-bold transition-transform active:scale-95 hover:brightness-110"
+              className="inline-flex items-center gap-2 bg-primary-container text-on-primary-container px-5 py-2 rounded-lg font-bold transition-transform active:scale-95 hover:brightness-110"
             >
-              Currículum
+              <span>Currículum</span>
+              <Download size={16} />
             </Link>
           </div>
 

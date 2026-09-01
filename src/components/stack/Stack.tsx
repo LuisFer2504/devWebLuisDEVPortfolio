@@ -7,26 +7,10 @@ import StaggerChildren, {
 } from '@/components/animations/StaggerChildren';
 import TechCard from './TechCard';
 import { technologies } from '@/data/technologies';
-import { useEffect, useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
-
-const slideVariants = {
-  enter: { opacity: 0, scale: 0.8, x: 60, filter: 'blur(8px)' },
-  center: { opacity: 1, scale: 1, x: 0, filter: 'blur(0px)' },
-  exit: { opacity: 0, scale: 0.8, x: -60, filter: 'blur(8px)' },
-};
 
 export default function Stack() {
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % technologies.length);
-    }, 3000);
-    return () => clearInterval(timer);
-  }, []);
-
-  const activeTech = technologies[activeIndex];
+  // Duplicamos el array para el efecto de loop infinito
+  const loopedTechs = [...technologies, ...technologies];
 
   return (
     <section
@@ -47,26 +31,19 @@ export default function Stack() {
           </StaggerChildren>
         </div>
 
-        {/* ── Mobile Auto-Play Loop (< md) ── */}
+        {/* ── Mobile Horizontal Scroll Marquee (<md) ── */}
         <div className="block md:hidden">
-          <div className="relative flex items-center justify-center h-40 overflow-hidden">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeTech.name}
-                variants={slideVariants}
-                initial="enter"
-                animate="center"
-                exit="exit"
-                transition={{ duration: 0.45, ease: [0.4, 0, 0.2, 1] }}
-                className="absolute"
-              >
-                <div
-                  className="absolute inset-0 -z-10 rounded-3xl opacity-30 blur-2xl"
-                  style={{ background: activeTech.color }}
-                />
-                <TechCard technology={activeTech} />
-              </motion.div>
-            </AnimatePresence>
+          <div
+            className="relative overflow-hidden"
+            style={{ maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)' }}
+          >
+            <div className="flex gap-8 animate-marquee hover:[animation-play-state:paused] w-max">
+              {loopedTechs.map((tech, idx) => (
+                <div key={`${tech.name}-${idx}`} className="shrink-0">
+                  <TechCard technology={tech} />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </Container>

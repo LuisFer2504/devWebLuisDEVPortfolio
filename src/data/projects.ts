@@ -34,18 +34,18 @@ export const projects: readonly Project[] = [
     title: 'Dev-EcoLink',
     description:
       'Dev-EcoLink es una aplicación web diseñada para fomentar el cuidado del medio ambiente mediante la participación ciudadana. El proyecto propone una experiencia gamificada donde los usuarios pueden registrar actividades ecológicas, acumular puntos, completar retos y contribuir al cuidado de las playas de Paita.',
-    image: '/images/projects/eco-link-home.png',
+    image: '/images/projects/eco-link-home.webp',
     imageAlt:
       'Interfaz principal de la aplicación Dev-EcoLink Paita mostrando la sección de inicio, mapa de playas, registro de actividades y ranking de líderes.',
     tags: ['React', 'TypeScript', 'Tailwind CSS', 'Gamificación'],
     links: [
-      { label: 'Ver Demo', href: 'https://dev-eco-link.vercel.app/', icon: 'external-link', variant: 'button' },
+      { label: 'Ver Demo', href: 'https://dev-eco-link.vercel.app/', icon: 'external-link', variant: 'primary' },
       { label: 'GitHub', href: 'https://github.com/LuisFer2504/Dev-EcoLink', icon: 'github', variant: 'secondary' },
     ],
     images: [
-      '/images/projects/eco-link-home.png',
-      '/images/projects/eco-link-register.png',
-      '/images/projects/eco-link-ranking.png',
+      '/images/projects/eco-link-home.webp',
+      '/images/projects/eco-link-register.webp',
+      '/images/projects/eco-link-ranking.webp',
     ],
     featured: true,
   },

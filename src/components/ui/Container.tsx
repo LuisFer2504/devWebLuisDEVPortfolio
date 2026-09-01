@@ -13,7 +13,7 @@ export default function Container({
 }: ContainerProps) {
   return (
     <Component
-      className={`mx-auto w-full max-w-[1280px] px-5 md:px-6 ${className}`}
+      className={`mx-auto w-full max-w-[1280px] px-5 md:px-8 lg:px-6 ${className}`}
     >
       {children}
     </Component>

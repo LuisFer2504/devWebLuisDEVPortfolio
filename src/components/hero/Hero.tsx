@@ -76,7 +76,7 @@ export default function Hero() {
             variants={subtitleVariants}
             initial="hidden"
             animate="visible"
-            className="font-body text-lg leading-relaxed text-on-surface-variant max-w-2xl"
+            className="font-body text-lg md:text-xl leading-relaxed text-on-surface-variant max-w-2xl"
           >
             Desarrollador Full Stack especializado en aplicaciones de alto
             rendimiento con{' '}

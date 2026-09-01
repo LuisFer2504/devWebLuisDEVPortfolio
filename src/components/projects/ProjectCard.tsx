@@ -22,11 +22,14 @@ function ProjectLinkItem({ link }: { readonly link: ProjectLink }) {
   const Icon = linkIconMap[link.icon] ?? ExternalLink;
   const isButton = link.variant === 'button';
   const isPrimary = link.variant === 'primary';
+  const isExternal = link.href.startsWith('http') || link.href.startsWith('//');
 
   if (isButton) {
     return (
       <Link
         href={link.href}
+        target={isExternal ? '_blank' : undefined}
+        rel={isExternal ? 'noopener noreferrer' : undefined}
         className="inline-flex items-center gap-2 bg-primary text-on-primary-fixed px-8 py-3 rounded-lg font-bold transition-all hover:brightness-110"
       >
         {link.label}
@@ -35,14 +38,26 @@ function ProjectLinkItem({ link }: { readonly link: ProjectLink }) {
     );
   }
 
+  if (isPrimary) {
+    return (
+      <Link
+        href={link.href}
+        target={isExternal ? '_blank' : undefined}
+        rel={isExternal ? 'noopener noreferrer' : undefined}
+        className="inline-flex items-center gap-2 border border-primary/50 text-primary px-5 py-2.5 rounded-lg font-semibold text-sm transition-all hover:bg-primary/10 hover:border-primary"
+      >
+        {link.label}
+        <Icon size={14} />
+      </Link>
+    );
+  }
+
   return (
     <Link
       href={link.href}
-      className={`inline-flex items-center gap-2 font-mono text-sm transition-colors ${
-        isPrimary
-          ? 'text-primary hover:underline'
-          : 'text-on-surface-variant hover:text-on-surface'
-      }`}
+      target={isExternal ? '_blank' : undefined}
+      rel={isExternal ? 'noopener noreferrer' : undefined}
+      className="inline-flex items-center gap-2 font-mono text-sm text-on-surface-variant hover:text-on-surface transition-colors"
     >
       {link.label}
       <Icon size={14} />
