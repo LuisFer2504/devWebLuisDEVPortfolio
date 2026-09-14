@@ -75,3 +75,8 @@ export interface ContactFormField {
   readonly placeholder: string;
   readonly rows?: number;
 }
+
+// ─── Contact API ───────────────────────────────────────────────
+export interface ContactApiResponse {
+  message: string;
+}
