@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ExternalLink, BookOpen, ArrowRight, ChevronLeft, ChevronRight, Maximize2 } from 'lucide-react';
@@ -62,6 +62,44 @@ function ProjectLinkItem({ link }: { readonly link: ProjectLink }) {
       {link.label}
       <Icon size={14} />
     </Link>
+  );
+}
+
+// ─── Description with "Ver más" toggle ─────────────────────────
+function ProjectDescription({ text }: { readonly text: string }) {
+  const [expanded, setExpanded] = useState(false);
+  const [isClamped, setIsClamped] = useState(false);
+  const ref = useRef<HTMLParagraphElement>(null);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    const checkClamp = () => setIsClamped(el.scrollHeight > el.clientHeight + 1);
+    checkClamp();
+
+    window.addEventListener('resize', checkClamp);
+    return () => window.removeEventListener('resize', checkClamp);
+  }, [text, expanded]);
+
+  return (
+    <div>
+      <p
+        ref={ref}
+        className={`text-on-surface-variant leading-relaxed ${expanded ? '' : 'line-clamp-3'}`}
+      >
+        {text}
+      </p>
+      {(isClamped || expanded) && (
+        <button
+          type="button"
+          onClick={() => setExpanded((prev) => !prev)}
+          className="mt-1 font-mono text-xs font-semibold text-primary hover:underline"
+        >
+          {expanded ? 'Ver menos' : 'Ver más'}
+        </button>
+      )}
+    </div>
   );
 }
 
@@ -218,9 +256,7 @@ export default function ProjectCard({
             >
               {project.title}
             </h3>
-            <p className="text-on-surface-variant leading-relaxed line-clamp-3">
-              {project.description}
-            </p>
+            <ProjectDescription text={project.description} />
             <div className={`flex flex-wrap gap-4 pt-4 ${isFullWidth ? 'lg:gap-6' : ''}`}>
               {project.links.map((link) => (
                 <ProjectLinkItem key={link.label} link={link} />
