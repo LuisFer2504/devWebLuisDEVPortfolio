@@ -28,7 +28,7 @@ export default function Projects() {
               arquitecturas complejas y soluciones creativas de front-end.
             </p>
           </div>
-          <Link
+          {/*<Link
             href="#"
             className="group flex items-center gap-2 font-mono text-sm text-primary whitespace-nowrap"
           >
@@ -37,7 +37,7 @@ export default function Projects() {
               size={16}
               className="transition-transform group-hover:translate-x-1"
             />
-          </Link>
+          </Link>*/}
         </FadeUp>
 
         {/* Project Grid */}
