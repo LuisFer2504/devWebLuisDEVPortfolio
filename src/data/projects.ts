@@ -2,31 +2,27 @@ import type { Project } from '@/types';
 
 export const projects: readonly Project[] = [
   {
-    id: 'nexus-dashboard',
-    title: 'Nexus Dashboard',
+    id: 'queue-management-system',
+    title: 'Sistema de Gestión de Colas y Ventanillas',
     description:
-      'Motor analítico en tiempo real con integración de WebSockets y componentes personalizados de visualización de datos.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAKSb9f2JUgZgpF0LwCNEnP4GnwTKrYBQcVB9OQ1Rgov1Vl6apsMLatKwDahNord6m1SXQInCk2QkbfJdtEksM6ZzjiXf-SNiQ-pHERSCAtkh5R2WC8GaQ0RpsuEz3fshilzG93zLywjsW2okzewnzZ2-8kytOjZ2AujPLwYcar2RUQL7s_EnHiBJX8kCesomzeYGPOlRyw183aK6aosYSwHtYVVsD7bI4vgx4L3npS-pD_Eg_0HyPDsmGMJJeqi44DxpAKp20zp_s',
+      'Proyecto profesional desarrollado durante mis prácticas en el Hospital de Apoyo Nuestra Señora de las Mercedes de Paita. Gestiona la atención de usuarios mediante tickets y ventanillas: administra áreas, genera y llama tickets, controla tiempos de espera y atención, y ofrece una pantalla de visualización en tiempo real junto con reportes filtrables y soporte para atención preferencial.',
+    image: '/images/projects/queue-management-1.webp',
     imageAlt:
-      'Dashboard profesional de alta tecnología con visualizaciones de datos, gráficos y análisis de usuarios en tema oscuro con acentos cyan y azul eléctrico.',
-    tags: ['React', 'Node.js', 'PostgreSQL'],
+      'Interfaz del Sistema de Gestión de Colas y Ventanillas del Hospital Nuestra Señora de las Mercedes mostrando el manejo de tickets, ventanillas y pantalla de visualización.',
+    tags: ['Java', 'NetBeans', 'SQLServer'],
     links: [
-      { label: 'Demo', href: '#', icon: 'external-link', variant: 'primary' },
-      { label: 'GitHub', href: '#', icon: 'github', variant: 'secondary' },
+      {
+        label: 'Ver Funcionamiento del Proyecto',
+        href: 'https://drive.google.com/file/d/1tRABHPwPk34clfGRemstXOxWRt9RBYm3/view?usp=sharing',
+        icon: 'external-link',
+        variant: 'primary',
+      },
     ],
-  },
-  {
-    id: 'ecommerce-titan',
-    title: 'E-Commerce Titan',
-    description:
-      'Plataforma de comercio headless de alta conversión con SSR optimizado y procesamiento de pagos serverless.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDePb_N3CXDKvwr0M40I0z2Clz-BEIkp2P3pWLTq17VLNQcdREIDBdTjOEhmWjvDUKDARfQ3YmgCozhiKJQPY91ySqEWLuPTczUgIbnaA5vMRdH1e4DM3PfVp8mEn55ye-trOr5OiV8_yokUYx_7ZLeBvIfAtK6vzGz2Nx2jER3pgxN9QwrSFJeh7CWBaDp2cDoHw1e29h8yEoj8Rhlj8VjwYCHGcHfTrPDgfDPLk6EA1OlJ-FzDQIpcrZxtSgqmyvqYrQy7p5ig8c',
-    imageAlt:
-      'Aplicación de e-commerce elegante mostrando una página de producto minimalista con fotografía de alta resolución.',
-    tags: ['Next.js', 'Stripe', 'AWS'],
-    links: [
-      { label: 'Demo', href: '#', icon: 'external-link', variant: 'primary' },
-      { label: 'GitHub', href: '#', icon: 'github', variant: 'secondary' },
+    images: [
+      '/images/projects/queue-management-1.webp',
+      '/images/projects/queue-management-2.webp',
+      '/images/projects/queue-management-3.webp',
+      '/images/projects/queue-management-4.webp',
     ],
   },
   {
